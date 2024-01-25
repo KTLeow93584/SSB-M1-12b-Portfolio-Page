@@ -1,0 +1,227 @@
+<!-- ---------Notes-------- -->
+<!-- Web Preview Link: https://45b0401d-e3d7-4a7d-af1c-62c15885d0d3-00-2suuzgzehelum.picard.replit.dev/ -->
+<!-- Created due to an issue with "Connection Resets" when admins tried to run the project/view on New Tab -->
+<!-- Backup Project: N/A (Pending Creation) -->
+<!-- ---------------------- -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Portfolio Page - Leow Kean Tat (Kaz)</title>
+  <!-- ----------------------- -->
+  <!-- Core CSS Stylesheet -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- ----------------------- -->
+  <!-- Bootstrap v5 dependency -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- ----------------------- -->
+  <!-- Google Fonts APIs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Oswald: https://fonts.google.com/specimen/Oswald -->
+  <!-- Libre Baskerville: https://fonts.google.com/specimen/Libre+Baskerville -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <!-- ----------------------- -->
+  <!-- Font Awesome APIs -->
+  <script src="https://kit.fontawesome.com/fdebea0a02.js" crossorigin="anonymous"></script>
+  <!-- ----------------------- -->
+</head>
+
+<body onload="onLoadPage()" onresize="onResizePage()">
+  <!-- ------------------ -->
+  <!-- Free-flow Elements -->
+  <div class="free-flow-element-group">
+    <div id="settings-panel" class="page-theme-color-settings-group">
+      <!-- --------- -->
+      <!-- Show/Hide Cogwheel Button -->
+      <button onclick="onSwitchSettingsButtonState()" class="btn px-2 py-2">
+        <i class="fs-4 fas fa-cog"></i>
+      </button>
+      <!-- --------- -->
+      <!-- Settings Panel -->
+      <div class="py-1">
+        <!-- 1st Row of Colors -->
+        <div class="page-theme-color-settings-row mt-1 mb-2">
+          <!-- Navy Blue Variant 1 -->
+          <div onclick="onChangeThemeColor('#4361ee')" style="background-color:#4361ee;"></div>
+          <!-- Navy Blue Variant 2 -->
+          <div onclick="onChangeThemeColor('#4cc9f0')" style="background-color:#4cc9f0;"></div>
+          <!-- Mahogany -->
+          <div onclick="onChangeThemeColor('#420c09')" style="background-color:#420c09;"></div>
+          <!-- Crimson -->
+          <div onclick="onChangeThemeColor('#b90e0a')" style="background-color:#b90e0a;"></div>
+        </div>
+        <!-- --------- -->
+        <!-- 2nd Row of Colors -->
+        <div class="page-theme-color-settings-row mb-1">
+          <!-- Fern -->
+          <div onclick="onChangeThemeColor('#5dbb63')" style="background-color:#5dbb63;"></div>
+          <!-- Juniper -->
+          <div onclick="onChangeThemeColor('#ffb6c1')" style="background-color:#3a5311;"></div>
+          <!-- Dark Gray -->
+          <div onclick="onChangeThemeColor('#708090')" style="background-color:#708090;"></div>
+          <!-- Dark Gray Charcoal -->
+          <div onclick="onChangeThemeColor('#36454f')" style="background-color:#36454f;"></div>
+        </div>
+        <!-- --------- -->
+        <!-- 3rd Row of Colors -->
+        <div class="page-theme-color-settings-row mb-1">
+          <!-- School Bus Yellow-->
+          <div onclick="onChangeThemeColor('#ffd800')" style="background-color:#ffd800;"></div>
+          <!-- Amber -->
+          <div onclick="onChangeThemeColor('#ffbf00')" style="background-color:#ffbf00;"></div>
+          <!-- Beige -->
+          <div onclick="onChangeThemeColor('#ffffcc')" style="background-color:#ffffcc;"></div>
+          <!-- Chartreuse -->
+          <div onclick="onChangeThemeColor('#eeeeee')" style="background-color:#dfff00;"></div>
+        </div>
+        <!-- --------- -->
+      </div>
+      <!-- --------- -->
+    </div>
+  </div>
+  <!-- -->
+  <section class="page-section">
+    <!-- Introduction Section -->
+    <section id="introduction-section" class="px-5 pt-3 rounded">
+      <div class="row">
+        <div class="col-lg-8 rounded">
+          <h1 class="oswald base-text">Leow Kean Tat (Kaz)</h1>
+          <h5 class="base-text">Game Developer/Software Developer</h5>
+          <p class="base-text">
+            I am a game developer specialized in single player games for both the PC and mobile and a software developer
+            specialized in both front-end and back-end development for both mobile and web apps. Want to know how I may be
+            of any help in your project? Check out my <a href="#featured-projects-group" class="hyperlink-text">project
+              portfolio</a> and <a href="documents/Leow_Kean_Tat_-_Resume.pdf" download class="hyperlink-text">resume</a>.
+          </p>
+          <div class="form-check form-switch">
+            <input id="flex-switch-screen-mode" class="form-check-input" onclick="onChangeDarkLightMode()" type="checkbox" role="switch">
+            <label id="dark-mode-switch-label" class="form-check-label base-text" for="flex-switch-screen-mode">Dark Mode</label>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center rounded">
+          <img src="images/profile-cropped.png" alt="Profile" width="300px" height="auto">
+        </div>
+      </div>
+    </section>
+    <!-- ------------------ -->
+    <!-- Experience Section -->
+    <section id="experiences-group" class="px-5 rounded">
+      <div class="row">
+        <div class="col-lg-12 p-0 m-0">
+          <h2 id="experience-header" class="fs-1 oswald header-group base-text">Experiences</h2>
+        </div>
+      </div>
+      <div class="col-lg-12 mt-3 mx-0">
+        <p class="base-text">I have about 8 years of developing softwares (games and apps) for clients as part of my employment to previous
+          companies. Here's a quick overview of my technical skill sets and technology stacks used:</p>
+      </div>
+      <div id="experience-list" class="row mt-3"></div>
+    </section>
+    <!-- ------------------ -->
+    <!-- Testimonial Section -->
+    <!-- Bootstrap Reference for Carousel: https://getbootstrap.com/docs/5.3/components/carousel/ -->
+    <section id="testimonials-group" class="px-5 mt-45 rounded">
+      <div class="row">
+        <div class="col-lg-12 p-0 m-0">
+          <h2 id="testimonials-header" class="fs-1 oswald header-group base-text">Testimonials</h2>
+        </div>
+      </div>
+  
+      <div id="testimonials-carousel" class="carousel slide mt-3" data-bs-ride="carousel">
+        <!-- Carousel Items List. -->
+        <div id="testimonial-carousel-item-list" class="carousel-inner mt-2"></div>
+        <!-- Carousel Navigation (Element # to #) Buttons List. -->
+        <div id="testimonials-carousel-nav" class="carousel-indicators"></div>
+        <!-- Carousel Control (Next, Previous) Buttons -->
+        <!-- Previous -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonials-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <!-- Next -->
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonials-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+        <!-- -------- -->
+      </div>
+    </section>
+    <!-- ------------------ -->
+    <!-- Featured Projects -->
+    <section id="featured-projects-group" class="px-5 mt-5 rounded">
+      <div class="row">
+        <div class="col-lg-12 p-0 m-0">
+          <h2 id="featured-projects-header" class="fs-1 oswald header-group base-text">Featured Projects</h2>
+        </div>
+      </div>
+      <div id="portfolio-list" class="row mt-3"></div>
+    </section>
+    <!-- ------------------ -->
+    <!-- Blog Posts -->
+    <section id="blog-post-group" class="px-5 mt-5 rounded">
+      <div class="row">
+        <div class="col-lg-12 p-0 m-0">
+          <h2 id="blog-post-header" class="fs-1 oswald header-group base-text">Latest Blog Posts</h2>
+        </div>
+      </div>
+      <div id="blog-post-list" class="row mt-3"></div>
+    </section>
+    <!-- ------------------ -->
+    <!-- Contact -->
+    <section id="contact-and-link-group" class="px-0 mx-0">
+      <footer class="row py-5 border-top">
+  
+        <div id="link-group" class="col-6 d-flex flex-column align-items-center">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <h5>Quick Links</h5>
+            </li>
+            <li class="nav-item mb-2"><a href="#introduction-section" class="nav-link p-0">Home</a></li>
+            <li class="nav-item mb-2"><a href="#experiences-group" class="nav-link p-0">Experiences</a></li>
+            <li class="nav-item mb-2"><a href="#testimonials-group" class="nav-link p-0">Testimonials</a></li>
+            <li class="nav-item mb-2"><a href="#featured-projects-group" class="nav-link p-0">Featured Projects</a></li>
+            <li class="nav-item"><a href="#blog-post-group" class="nav-link p-0">Latest Blog Posts</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-2"></div>
+  
+        <div id="contact-group" class="col-2 d-flex flex-row justify-content-evenly">
+          <a href="https://www.linkedin.com/in/kazcade/" class="fs-3"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://projectkazcade.itch.io/" class="fs-3"><i class="fa-brands fa-itch-io"></i></a>
+          <a href="tel:+60175845732" target="_blank" class="fs-3"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+  
+        <div class="col-2"></div>
+      </footer>
+    </section>
+    <!-- Copyright -->
+    <section id="copyright-group" class="px-0 mx-0">
+      <footer class="row py-5 border-top">
+        <div class="col-12 d-flex flex-column align-items-center text-align-center">
+          <p>&copy; 2024 Leow Kean Tat, Made with <i class="fa-solid fa-heart"></i> from Replit.</p>
+        </div>
+      </footer>
+    </section>
+  <!-- ------------------ -->
+  </section>
+  <!-- -->
+  <!-- List of Scripts -->
+  <script type="module" src="scripts/script.js"></script>
+  <script type="module" src="scripts/experience.js"></script>
+  <script type="module" src="scripts/portfolio.js"></script>
+  <script type="module" src="scripts/testimonial"></script>
+  <!-- ------------------ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

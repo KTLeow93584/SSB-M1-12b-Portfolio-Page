@@ -1,0 +1,7 @@
+# List of files to ignore in the Replit project.
+.replit
+replit.nix
+
+# Sigma School related files.
+instructions.md
+lessonplan.md
