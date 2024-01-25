@@ -3,13 +3,18 @@ import { testimonials } from "./testimonial-list.js";
 const avatarBaseProjectURL = "images/avatars";
 const carouselItemListElement = document.getElementById("testimonial-carousel-item-list");
 const carouselButtonListElement = document.getElementById("testimonials-carousel-nav");
+const carouselPlaceholderItemElement = document.getElementById("testimonial-placeholder");
 
 let currentCarouselElementIndex = 0;
 let cachedNumberOfElementsPerPage = 0;
+const carouselIntervalDuration = 10000;
 
 export function loadTestimonials() {
   currentCarouselElementIndex = 0;
   resizeTestimonialCarousel();
+
+  if (!carouselPlaceholderItemElement.classList.contains("hidden"))
+    carouselPlaceholderItemElement.classList.add("hidden");
 }
 
 export function resizeTestimonialCarousel() {
@@ -58,7 +63,7 @@ export function resizeTestimonialCarousel() {
       elementListHTMLResult += `
         <div id="testimonial-carousel-item-${i}"
           class="px-3 carousel-item ${i == currentPage ? "active" : ""}"
-          data-bs-interval="5500">
+          data-bs-interval="${carouselIntervalDuration}">
             <div class="row">
       `;
       

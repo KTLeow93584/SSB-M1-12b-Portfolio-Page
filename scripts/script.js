@@ -21,11 +21,11 @@ const darkModeTextColor = "#ffffff";
 const darkModeDesc = "Dark Mode Enabled";
 // ================================================
 function onLoadPage() {
-  loadExperienceSection();
   loadTestimonials();
-  loadPortfolios();
-  loadBlogPostSection();
-  
+  //loadExperienceSection();
+  //loadPortfolios();
+  //loadBlogPostSection();
+
   swapToDarkMode();
   dlModeCheckbox.checked = true;
 }
