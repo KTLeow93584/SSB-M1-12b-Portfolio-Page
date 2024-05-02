@@ -7,7 +7,8 @@
 
 ## Installation/Setup
 - Clone, fork or download the project as zip.
-- Open up the "index.html" file on your browser.
+- As the project utilizes Bootstrap CDN (With a local file fallback), FontAwesome CDN and local JS Modules, simply running the "index.html" (via clicking) on your browser would not work, as it would land onto several issues (E.g. CORS due to browser flagging security issues with running on "file://" or "http://").
+- Set up a <b>Node server</b>, use <b>VSCode</b>'s live server extension or other similar methods to get the page working as intended.
 
 ## Preview
 <div align="center">
